@@ -1,0 +1,103 @@
+body{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.container-grid{
+    display: grid;
+    grid-template-areas: 
+    "nav nav"
+    "aside products"
+    "aside products"
+    "footer footer";
+}
+nav{
+    grid-area: nav;
+    display: flex;
+    width: 100vw;
+    height: 8vh;
+    background-color: rgb(12, 33, 79);
+    justify-content: center;
+    align-items: center;
+}
+nav h2{
+    color: white;
+}
+aside{
+    grid-area: aside;
+    display: flex;
+    width: 20vw;
+    background-color: rgba(228, 228, 228, 0.937);
+    flex-direction: column;
+}
+aside ul{
+    list-style: none;
+    margin: 0;
+    padding-left: 2vw;
+}
+aside a{
+    text-decoration: none;
+    color: black;
+}
+aside span{
+    color: rgb(114, 114, 114);
+}
+a:hover, span:hover{
+    color: rgb(186, 186, 186);
+}
+aside ul li{
+    margin-top: 0.5vh;
+}
+section{
+    grid-area: products;
+    background-color: rgba(228, 228, 228, 0.937);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: grid;
+    width: 80vw;
+    height: 150vh;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 10px;
+}
+section div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    justify-content: end;
+}
+.container-box-info{
+    display: flex;
+    width: 100%;
+}
+section p{
+    color: gray;
+}
+section h3, p{
+    text-align: center;
+    margin-top: 1vh;
+    margin-bottom: 1.5vh;
+}
+
+.p-button{
+    padding-top: 1vh;
+    background-color: rgb(12, 33, 79);
+    width: 100%;
+    height: 100%;
+    color: white;
+    margin: 0;
+}
+footer{
+    grid-area: footer;
+    text-align: center;
+    color: gray;
+    width: 100vw;
+    height: 8vh;
+}
+@media (max-width: 768px) {
+    section{
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+    }
+}
